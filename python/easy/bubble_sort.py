@@ -1,15 +1,13 @@
 def bubbleSort(array):
     # Write your code here.
-    while True:
-        swaps = 0
+    is_sorted = False
+    while not is_sorted:
+        is_sorted = True
         for i in range(len(array) - 1):
             if array[i] > array[i+1]:
-                swaps += 1
+                is_sorted = False
                 array[i], array[i+1] = array[i+1], array[i]
-        
-        if swaps == 0:
-            break
-
+    
     return array
 
 if __name__ == '__main__':
